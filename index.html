@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử phát triển HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #fff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .diagram-container {
+            position: relative;
+            width: 100%;
+            height: 650px;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .box {
+            position: absolute;
+            background: #fff;
+            border: 2px solid #555;
+            border-radius: 6px;
+            padding: 8px 12px;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .cloud {
+            position: absolute;
+            background: #e6f2ff;
+            border: 2px solid #6699cc;
+            border-radius: 50%;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 14px;
+            min-width: 100px;
+        }
+        .dotted-line {
+            position: absolute;
+            border-top: 2px dashed #666;
+        }
+        .solid-line {
+            position: absolute;
+            border-top: 2px solid #900;
+        }
+        .arrow::after {
+            content: "➤";
+            position: absolute;
+            right: -10px;
+            top: -8px;
+            color: #900;
+        }
+        .arrow-dotted::after {
+            content: "○";
+            position: absolute;
+            right: -6px;
+            top: -8px;
+            font-size: 10px;
+            color: #666;
+        }
+        .text-note {
+            position: absolute;
+            font-size: 12px;
+            color: #444;
+            background: #f9f9f9;
+            padding: 0 4px;
+        }
+        .description {
+            margin-top: 30px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lịch sử phát triển HTML</h1>
+
+        <!-- SƠ ĐỒ BẮT ĐẦU -->
+        <div class="diagram-container">
+            <!-- Hàng trên cùng -->
+            <div class="cloud" style="top: 40px; left: 340px;">Computer conferencing</div>
+            <div class="cloud" style="top: 40px; left: 540px;">IBM<br>Group Talk</div>
+            <div class="cloud" style="top: 100px; left: 440px;">VAX/<br>NOTES</div>
+            <div class="cloud" style="top: 100px; left: 560px;">uucp<br>News</div>
+            <div class="cloud" style="top: 140px; left: 720px;">Hierarchical<br>systems</div>
+
+            <!-- Bên trái trên -->
+            <div class="box" style="top: 120px; left: 100px;">HyperCard</div>
+            <div class="box" style="top: 160px; left: 180px;">ENQUIRE</div>
+            <div class="cloud" style="top: 220px; left: 100px;">Linked<br>Information</div>
+
+            <!-- Trung tâm -->
+            <div class="box" style="top: 200px; left: 300px; background: #ffcccc; border-color: #900;">A Proposal<br>"Mesh"</div>
+            <div class="box" style="top: 360px; left: 300px; background: #ffffcc; border-color: #cc9900;">This document</div>
+            <div class="cloud" style="top: 340px; left: 100px;">"Hypertext"</div>
+            <div class="cloud" style="top: 440px; left: 100px;">Hypermedia</div>
+
+            <!-- Bên phải -->
+            <div class="cloud" style="top: 220px; left: 560px;">CERNDOC</div>
+            <div class="box" style="top: 300px; left: 700px;">CERN</div>
+
+            <!-- Phân cấp CERN -->
+            <div class="box" style="top: 360px; left: 700px; width: 140px;">division</div>
+            <div class="box" style="top: 400px; left: 660px; width: 60px;">group</div>
+            <div class="box" style="top: 400px; left: 760px; width: 60px;">group</div>
+            <div class="box" style="top: 440px; left: 700px; width: 140px;">section</div>
+
+            <!-- Phía dưới trung tâm -->
+            <div class="box" style="top: 440px; left: 300px;">etc<br>Comms ACM</div>
+            <div class="box" style="top: 460px; left: 400px;">Tim<br>Berners-Lee</div>
+
+            <!-- Các ghi chú chữ nhỏ -->
+            <div class="text-note" style="top: 130px; left: 200px;">For example</div>
+            <div class="text-note" style="top: 130px; left: 620px;">For example</div>
+            <div class="text-note" style="top: 170px; left: 600px;">For example</div>
+            <div class="text-note" style="top: 210px; left: 400px;">unifies</div>
+            <div class="text-note" style="top: 250px; left: 400px;">describes</div>
+            <div class="text-note" style="top: 300px; left: 350px;">includes</div>
+            <div class="text-note" style="top: 340px; left: 200px;">includes</div>
+            <div class="text-note" style="top: 380px; left: 200px;">describes</div>
+            <div class="text-note" style="top: 400px; left: 350px;">refers to</div>
+            <div class="text-note" style="top: 430px; left: 420px;">wrote</div>
+
+            <!-- Các đường nối đơn giản hóa -->
+            <svg style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;">
+                <!-- Đường nét đứt -->
+                <path d="M150,140 L180,140 L180,160" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                <path d="M250,220 L280,220" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                <path d="M150,280 L150,340" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                <path d="M400,220 L440,220" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                <path d="M660,180 L720,180 L720,140" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                <path d="M770,180 L770,260 L730,260" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                <path d="M730,340 L730,360" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                <path d="M620,100 L720,100 L720,140" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                <path d="M500,70 L540,70 L540,40" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                
+                <!-- Đường nét liền màu đỏ -->
+                <path d="M350,260 L350,360" stroke="#900" stroke-width="3" fill="none"/>
+                <path d="M150,400 L150,440" stroke="#900" stroke-width="3" fill="none"/>
+                <path d="M200,380 L300,380" stroke="#900" stroke-width="3" fill="none"/>
+                <path d="M350,420 L400,420" stroke="#900" stroke-width="3" fill="none"/>
+                <path d="M450,440 L450,460" stroke="#900" stroke-width="3" fill="none"/>
+                <path d="M450,220 L440,100" stroke="#900" stroke-width="3" fill="none"/>
+                <path d="M490,140 L540,140" stroke="#900" stroke-width="3" fill="none"/>
+                <path d="M500,70 L440,70 L440,100" stroke="#900" stroke-width="3" fill="none"/>
+                
+                <!-- Mũi tên -->
+                <polygon points="350,360 344,350 356,350" fill="#900"/>
+                <polygon points="150,440 144,430 156,430" fill="#900"/>
+                <polygon points="300,380 290,374 290,386" fill="#900"/>
+                <polygon points="400,420 390,414 390,426" fill="#900"/>
+                <polygon points="450,460 444,450 456,450" fill="#900"/>
+                <polygon points="440,100 434,110 446,110" fill="#900"/>
+                <polygon points="540,140 530,134 530,146" fill="#900"/>
+                <polygon points="440,70 446,80 434,80" fill="#900"/>
+            </svg>
+        </div>
+
+        <!-- Phần mô tả văn bản -->
+        <div class="description">
+            <p><strong>Lịch sử phát triển HTML</strong></p>
+            <p>Các chuẩn HTML của trang web hiện nay được nhà vật lý Tim Berners-Lee đưa ra lần đầu tiên vào những năm 1990 của thế kỷ XX tại Trung tâm Vật lý Hạt nhân CERN.</p>
+            <p>Ý tưởng ban đầu của Berners-Lee là muốn thiết lập một chuẩn chung để hiển thị và chia sẻ các tài liệu có thể trao đổi bên trong cơ quan CERN.</p>
+            <p>Hình ảnh sau là sơ đồ thông tin mà Tim Berners-Lee đưa ra lần đầu tiên để minh họa cho ý tưởng của mình. Trong sơ đồ này, lần đầu tiên xuất hiện cụm từ "hypertext" (siêu văn bản).</p>
+            <p>Phiên bản đầu tiên của HTML được thiết lập vào cuối năm 1991 mang tên "Các thẻ HTML". Văn bản này do chính Tim Berners-Lee biên soạn.</p>
+            <p>Từ đó, các phiên bản tiếp theo của HTML lần lượt ra đời cùng với sự phát triển của công nghệ Internet.</p>
+            <p>Phiên bản hiện tại là HTML5 ra đời năm 2014.</p>
+            <p style="text-align: right; font-style: italic; margin-top: 20px;"><strong>Hình 7.7:</strong> Lịch sử phát triển HTML</p>
+        </div>
+    </div>
+</body>
+</html>
